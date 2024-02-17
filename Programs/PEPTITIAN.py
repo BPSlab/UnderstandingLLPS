@@ -84,9 +84,9 @@ def main(input_dataframe):
         motifToCount = str(combo)
     
         """
-        iterate trougth lines in dprStatisticsDataframe and take Sequence to
-        count current iteration Motif presence(number of sequences the motif appears in)
-        , and frequency (number of times the motif appears in a given sequence)
+        iterates trougth lines in dprStatisticsDataframe and takes Sequence to
+        count current iteration Motif presence (number of sequences the motif appears in),
+        and frequency (number of times the motif appears in a given sequence)
         """
         for inputDataframeLines in range (0,input_dataframe.shape[0]):
             sequence = str(input_dataframe.iloc[inputDataframeLines,1])
