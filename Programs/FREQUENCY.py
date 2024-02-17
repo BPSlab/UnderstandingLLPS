@@ -32,21 +32,21 @@ motifDataframe = pandas.read_excel((Path(mainProjectDirectory)/'Datasets'/"Motif
 
 #User Defined Functions 
 """
-Function that takes a motif ,then turns it into a full file name in the 
-format /motif.xslx after that it joins the file name with the Results file
+Function that takes a motif and turns it into a full file name in the 
+format /motif.xslx. It then joins the file name with the Results file
 path for the full output file path.
-Then it initializes a dataframe variable named "resultDataframe" where the 
-results of the computations detailed bellow will be stored, it then 
-initializes two list variables one is the list of the Uniprot IDs of 
-Proteins that the target sequence appears in,the other is the list of the 
-Uniprot IDs of Proteins that the target sequence does not appear in, next it 
-cycles trought the lines of the droplet promoting regions data frame in each line
-takes uniId and dpr sequence , counts Motif apearences in that dpr and adds it
+Afterwards it initializes a dataframe variable named "resultDataframe" where the 
+results of the computations detailed bellow will be stored. It then 
+initializes two list variables, where one is the list of the Uniprot IDs of 
+Proteins that the target sequence appears in, and the other is the list of the 
+Uniprot IDs of Proteins that the target sequence does not appear in. Next it 
+cycles trought the lines of the droplet promoting regions data frame, and in each line
+takes the UniProtID and dpr sequence, counts Motif apearences in that dpr and adds it
 to the list of the Uniprot IDs if the motif is found in the sequence and to the 
 list of the Uniprot IDs of Proteins that the target sequence appears in.
-Then writes to motifDataframe Unidprot ID,Sequence, Motif Frequency and Presence
-and the number of Uniprots the Motif is found in and the number of Uniprod Ids 
-its not, finally it writes motifDataframe to Motif excell with name motif_name.xlsx
+It writes in the motifDataframe UniProtID, Sequence, Motif Frequency and Presence
+and the number of UniProtIDs the motif is found, as well as the number of UniProtIDs 
+it is not found. Finally it writes motifDataframe to Motif excell with name motif_name.xlsx
 
 
 """ 
@@ -97,8 +97,8 @@ def makeMotifExcel(motif_name,target_sequences_dataframe):
 
 '''
 Function takes target_sequences_dataframe inicializes a list of motifs and 
-read lines of target_sequences_dataframe takes motifs from it and appends them
-to the list of motifs , for each motif it calls
+reads lines of target_sequences_dataframe. It takes motifs from the list and 
+appends them to the list of motifs, where for each motif it calls
 makeMotifExcel(motif,target_sequences_dataframe)
 
 '''
