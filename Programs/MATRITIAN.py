@@ -34,10 +34,10 @@ for motifDataframeLine in range (0,motifDataframe.shape[0]):
     matriceDataFrameColumnNames.append(motif)
 
 '''
-define matrician function that takes a input dataframe of lines and columns
-named after the Motifs in motifDataframe then for each Sequence in the 
-input_dataframe counts interactions of the motifs with eachother in the sequence
-and saves that value to the currespondent cell in the matrix, then writes the 
+define matrician function that takes an input dataframe of lines and columns
+named after the Motifs in motifDataframe. For each Sequence in the 
+input_dataframe it counts interactions of the motifs with eachother in the sequence
+and saves that value to the currespondent cell in the matrix. Finally it writes the 
 dataframe to Motif Occurence Matrix.xlsx
 '''
 def matrician (input_dataframe):
