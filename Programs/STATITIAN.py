@@ -39,17 +39,18 @@ negativeStatisticsDataframe=pandas.DataFrame(columns=columnNamesList)
 
 """
 Write statitian Function that takes input_dataframe,output_dataframe,
-output_file_name and control_variable and analises sequences in input_dataframe
-saves them in output_dataframe and outputs a excell sheet with output_dataframe 
-information that being the size of the sequence, residue count and percentage
-in said sequence and family and percentage of residues in that family for the sequence
+output_file_name and control_variable and analyses sequences in input_dataframe,
+saves them in output_dataframe, and outputs an excell sheet with output_dataframe 
+information. This information corresponds to number of amino acids in the sequence, 
+amino acid count and percentage, amino acid side chain count and percentage, and 
+families corresponding to the sequence. 
 """
 
 def statitian(input_dataframe,output_dataframe,output_file_name,control_variable):
     
     """
-    Iterate trought lines in input data frame and take uniprot Id and 
-    sequence from it , acording to control_variable
+    Iterate trought lines in input data frame and take UniProtIDs and 
+    sequence, acording to control_variable
     """
     for dataframeLineIndex in range(0, input_dataframe.shape[0]):
         
@@ -65,9 +66,9 @@ def statitian(input_dataframe,output_dataframe,output_file_name,control_variable
             output_dataframe.at[dataframeLineIndex, "Sequence"] = sequence
         
         """
-        Write to Dataframe size of the sequence, Amino acid count and percentage of said Amino acid
-        , family and percentage of Amino acids in that family 
-        in said sequence
+        Write to Dataframe number of amino acids in the sequence, 
+        amino acid count and percentage, amino acid side chain count
+        and percentage, and families corresponding to the sequence.  
         """
         output_dataframe.at[dataframeLineIndex, "Total aa"] = len(sequence)     
         output_dataframe.at[dataframeLineIndex, "A"] = sequence.count("A")
