@@ -14,28 +14,28 @@ peptideDataframe = pandas.read_excel((Path(mainProjectDirectory)/'Results'/'Pept
 
 def dataFrameFormater(input_dataframe,output_filename):
 
-    input_dataframe.drop(input_dataframe[input_dataframe['FCR'] < 0.2].index, inplace = True)
-    input_dataframe.drop(input_dataframe[input_dataframe['FCR'] > 0.4].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['FCR'] < 0.13].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['FCR'] > 0.28].index, inplace = True)
     
     print(input_dataframe)
     
-    input_dataframe.drop(input_dataframe[input_dataframe['NCPR'] < -0.1].index, inplace = True)
-    input_dataframe.drop(input_dataframe[input_dataframe['NCPR'] > 0.1].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['NCPR'] < 0].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['NCPR'] > 0.084].index, inplace = True)
     
     print(input_dataframe)
     
-    input_dataframe.drop(input_dataframe[input_dataframe['Mean Hydropathy'] < 3.1].index, inplace = True)
-    input_dataframe.drop(input_dataframe[input_dataframe['Mean Hydropathy'] > 3.9].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['Mean Hydropathy'] < 3.15].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['Mean Hydropathy'] > 3.76].index, inplace = True)
      
-    print(input_dataframe)
+    print(input_dataframe)  
          
-    input_dataframe.drop(input_dataframe[input_dataframe['Fraction Of Disorder Pormoting Residues'] < 0.74].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['Fraction Of Disorder Pormoting Residues'] < 0.79].index, inplace = True)
     input_dataframe.drop(input_dataframe[input_dataframe['Fraction Of Disorder Pormoting Residues'] > 0.86].index, inplace = True)
     
     print(input_dataframe)
     
-    input_dataframe.drop(input_dataframe[input_dataframe['Kappa'] < 0.15].index, inplace = True)
-    input_dataframe.drop(input_dataframe[input_dataframe['Kappa'] > 0.25].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['Kappa'] < 0.163].index, inplace = True)
+    input_dataframe.drop(input_dataframe[input_dataframe['Kappa'] > 0.242].index, inplace = True)
 
     print(input_dataframe)
  
