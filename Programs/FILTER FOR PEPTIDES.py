@@ -6,11 +6,11 @@ import os
 global mainProjectDirectory
 mainProjectDirectory = Path.cwd().parent
 
-outputFilePath = (Path(mainProjectDirectory)/'Results'/'Peptides Cider')
+outputFilePath = (Path(mainProjectDirectory)/'Results'/'Cider for peptides')
 if not os.path.exists(outputFilePath):
     os.makedirs(outputFilePath)
     
-peptideDataframe = pandas.read_excel((Path(mainProjectDirectory)/'Results'/'Peptides Cider'/'Peptides Cider.xlsx'))
+peptideDataframe = pandas.read_excel((Path(mainProjectDirectory)/'Results'/'Cider for peptides'/'Cider for peptides.xlsx'))
 
 def dataFrameFormater(input_dataframe,output_filename):
 
@@ -52,4 +52,5 @@ def dataFrameFormater(input_dataframe,output_filename):
     return(input_dataframe)
 
 df = dataFrameFormater(peptideDataframe,'Cider for peptides filtered.xlsx')
+
     
